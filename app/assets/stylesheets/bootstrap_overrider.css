@@ -1,0 +1,48 @@
+body{
+    /*background-image: url("http://jonesagyemang.site44.com/assets/images/fabric_plaid.png");*/
+    background-color: #fff;
+    overflow:hidden;
+}
+
+.headmaster {
+	width: 160px;
+	height: auto;
+}
+
+.pull-up {
+	margin-top: -30px;
+}
+
+#spritz {
+    text-align:center;
+    color: gray;
+    font-size: 100px;
+    width:inherit;
+    height: inherit;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -20%;
+    margin-top: -20%;
+}
+
+#spritz:first-letter {
+    color: red;
+    font-size: 200px;
+}
+
+#readthis {
+    display: none;
+}
+
+/*#main {
+    visibility: none;
+}*/
+
+.visible {
+    visibility: none;
+}
+
+.invisible {
+    visibility: hidden;
+}

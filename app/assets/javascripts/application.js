@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require nprogress
 //= require turbolinks
+//= require spritz
 //= require_tree .

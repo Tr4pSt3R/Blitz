@@ -1,0 +1,38 @@
+#main.row
+  .col-md-5.col-lg-5
+    = render :template => "libraries/new"
+
+  .col-md-5.col-lg-5
+    - if @libraries.empty?
+      .notice
+        Your Reading List is Empty
+    - else
+      %table
+        %thead
+          %tr
+            %th Title
+            %th Content
+            %th Source
+
+        %tbody
+          - @libraries.first do |library|
+            %tr
+              %td{ :class => "readingList", 
+                :data => { :library_content => "#{library.content}" } }
+                = library.title if library.title
+              %td
+                = link_to "Show", library
+              %td
+                = link_to "Edit", edit_library_path(library)
+              %td
+                = link_to "Destroy", library, method: :delete, confirm: "Are you sure you?"
+
+.row
+  %button{ class: "button", role: "button" }
+    %a{ href: "javascript:(function(){ cb = function(){ create_spritz(); }; var script=document.createElement('SCRIPT');script.src='https://miserlou.github.io/OpenSpritz/spritz.js?callback=cb'; script.onload=cb; document.body.appendChild(script);})();" } Spritz Text!
+  #spritz_me
+    Our ebooks are free in the United States because their copyright has expired. They may not be free of copyright in other countries. Readers outside of the United States must check the copyright laws of their countries before downloading or redistributing our ebooks. We also have a number of copyrighted titles, for which the copyright holder has given permission for unlimited non-commercial worldwide use.
+    
+.row
+  #readthis.col-lg-10
+    We want to look this morning at the ingredients of glorifying God. Paul is praying in verses 3-11 of Philippians 1. Verses 3-8 are a prayer of thanksgiving. Paul is thanking the Lord for the Philippians and the joy that they have brought him. Now, in verses 9-11, we have a prayer of petition. Paul is praying for the continual spiritual progress of the Philippians. In verse 6, Paul expressed his confidence in their continued discipleship or fruitfulness and now he prays for that continuance.
