@@ -8,7 +8,8 @@ $(document).ready(function(){
         e.preventDefault();
 
         content = $(this).data("library-content")
-        blitz(content);
+        $("#spritz_me").text( content );
+        // blitz(content);
     });
 });
 

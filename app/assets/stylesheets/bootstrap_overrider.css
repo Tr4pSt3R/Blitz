@@ -35,6 +35,8 @@ body{
     display: none;
 }
 
+.library-list{ max-height: 20px; }
+
 /*#main {
     visibility: none;
 }*/
